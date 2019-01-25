@@ -96,7 +96,7 @@ func (r *RNG) GetPassword(pwlen int) (string, error) {
 	pwb := pw.Bytes()
 	di := -1
 	if *digit {
-		di = r.GetByte() & (len(pwb) - 1)
+		di = r.GetByte() % (len(pwb) - 1)
 		d := '0' + r.GetByte()&9
 		pwb[di] = byte(d)
 	}
@@ -105,7 +105,7 @@ func (r *RNG) GetPassword(pwlen int) (string, error) {
 		// Get an index which isn't the one we just picked for putting a digit in,
 		// if we did that
 		for {
-			ui = r.GetByte() & (len(pwb) - 1)
+			ui = r.GetByte() % (len(pwb) - 1)
 			if ui != di {
 				break
 			}
@@ -117,7 +117,7 @@ func (r *RNG) GetPassword(pwlen int) (string, error) {
 		pi := -1
 		// Get an index which isn't the uppercase or the digit one
 		for {
-			pi = r.GetByte() & (len(pwb) - 1)
+			pi = r.GetByte() % (len(pwb) - 1)
 			if pi != di && pi != ui {
 				break
 			}
