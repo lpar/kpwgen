@@ -79,7 +79,7 @@ this utility. That may seem bad, but which would you rather have to transcribe:
 `traobtrotitromen` or `jqfsylgvyp`? `pytrarotit0atro` or `cq4dkpwxdm`?
 
 Personally, I can keep the longer koremutake passwords in my short term memory
-for long enough to retype them. I can't do whtat with the shorter alphabetic
+for long enough to retype them. I can't do that with the shorter alphabetic
 passwords.
 
 ## Other things of note
